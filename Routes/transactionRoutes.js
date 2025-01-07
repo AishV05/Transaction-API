@@ -12,7 +12,7 @@ router.get('/user/:userId', async (req, res) => {
 
   try {
     // Convert userId to ObjectId
-    const userId = mongoose.Types.ObjectId(req.params.userId);
+    const userId = new mongoose.Types.ObjectId(req.params.userId);
 
     // Build filters
     const filters = { userId };
